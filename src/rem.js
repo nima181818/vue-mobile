@@ -1,13 +1,12 @@
-/* eslint-disable */
-(function(doc, win) {
-    var docEl = doc.documentElement,
-        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-        recalc = function() {
-            var clientWidth = docEl.clientWidth;
-            if (!clientWidth) return;
-            docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';
-        };
-    if (!doc.addEventListener) return;
-    win.addEventListener(resizeEvt, recalc, false);
-    doc.addEventListener('DOMContentLoaded', recalc, false);
-})(document, window);
+function resetFontSize() {
+    var baseFontSize = 10;
+    var designWidth = 375;
+    var width = window.innerWidth;  // 
+    var currentFontSize = (width / designWidth) * baseFontSize;
+    document.getElementsByTagName('html')[0].style.fontSize = currentFontSize + 'px';
+  }
+
+  window.onresize = function() {
+    resetFontSize();
+  };
+  resetFontSize()
