@@ -18,5 +18,5 @@ npm run build
 npm run build --report
 ```
 ## 文件服务器
-用法：node fileserver.js
+用法：node index.js
 参数: public：文件根路径
