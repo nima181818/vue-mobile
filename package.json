@@ -5,11 +5,13 @@
   "author": "wangtao <601028413@qq.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js && npm run dist",
     "start": "npm run dev",
+    "dist": "http-server ./dist -p 8081",
     "build": "node build/build.js"
   },
   "dependencies": {
+    "http-server": "^13.0.2",
     "less": "3.11.1",
     "less-loader": "^6.2.0",
     "postcss-pxtorem": "5.1.1",
