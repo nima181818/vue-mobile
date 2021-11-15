@@ -5,13 +5,14 @@
   "author": "wangtao <601028413@qq.com>",
   "private": true,
   "scripts": {
-    "dev":"npm-run-all -p devserve dist",
+    "dev": "npm-run-all -p devserve dist",
     "devserve": "webpack-dev-server --host 0.0.0.0 --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "dist": "http-server ./dist -p 8081 -s",
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.24.0",
     "http-server": "^13.0.2",
     "less": "3.11.1",
     "less-loader": "^6.2.0",
