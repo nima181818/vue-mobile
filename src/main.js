@@ -6,12 +6,15 @@ import router from './router'
 import vant from 'vant'
 import 'vant/lib/index.css'
 import './rem.js'
+import ElementUI from 'element-ui' //element-ui的全部组件
+import 'element-ui/lib/theme-chalk/index.css' //element-ui的css
+Vue.use(ElementUI) //使用elementUI
 Vue.config.productionTip = false
 Vue.use(vant)
-/* eslint-disable no-new */
+    /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+    el: '#app',
+    router,
+    components: { App },
+    template: '<App/>'
 })
